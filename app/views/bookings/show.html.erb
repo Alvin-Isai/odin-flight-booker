@@ -1,0 +1,28 @@
+<% @booking.passengers.each do |passenger| %>
+<table>
+  <thead>
+    <tr>
+      <th>Flight</th>
+      <th>Departs</th>
+      <th>Arrives</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Duration</th>
+      <th>Passenger Name</th>
+      <th>Passenger Email</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @booking.flight.id%></td>
+        <td><%= @booking.flight.from_airport.name%></td>
+        <td><%= @booking.flight.to_airport.name%></td>
+        <td><%= @booking.flight.start_date.strftime('%b %d, %Y')%></td>
+        <td><%= @booking.flight.start_date.strftime('%H:%M%P') %></td>
+        <td><%= @booking.flight.duration%> Hours</td>
+        <td><%= passenger.name.titleize %></td>
+        <td><%= passenger.email %></td>
+      </tr>
+  <tbody>
+</table>
+<% end %>

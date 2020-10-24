@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Airport.create([{ name: 'SFO' }, { name: 'NYC' }, { name: 'PDX' }, { name: 'BOS' }, { name: 'LAX' }])
-Flight.create([{start_date: DateTime.current, duration: 8, from_airport_id: 21, to_airport_id: 22 }, {start_date: DateTime.current, duration: 4, from_airport_id: 2, to_airport_id: 4 }])
+# Airport.create([{ name: 'SFO' }, { name: 'NYC' }, { name: 'PDX' }, { name: 'BOS' }, { name: 'LAX' }])
+Flight.create([
+  {start_date: DateTime.new(2021, 8, 29,  0,  0,  0), 
+  duration: 2, 
+  from_airport_id: 22, 
+  to_airport_id: 24}
+  ])
 
